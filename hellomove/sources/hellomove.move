@@ -1,4 +1,4 @@
-module himove::hello {
+module hello_move::hello {
     use std::ascii::{String, string};
     use sui::object::{Self,UID};
     use sui::transfer::transfer;
@@ -10,10 +10,10 @@ module himove::hello {
     }
 
     fun init(ctx: &mut TxContext) {
-        let himove = Hello {
+        let hello_move = Hello {
             id:object::new(ctx),
-            say: string(b"move"),
+            say: string(b"BlkSword"),
         };
-        transfer(himove, sender(ctx));
+        transfer(hello_move, sender(ctx));
     }
 }
